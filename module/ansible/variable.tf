@@ -1,0 +1,10 @@
+variable "keypair" {}
+variable "name" {}
+variable "subnet_id" {}
+variable "vpc" {}
+variable "bastion_key" {}
+variable "private-key" {}
+variable "nexus-ip" {}
+variable "nr-key" {}
+variable "nr-acc-id" {}
+
