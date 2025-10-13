@@ -33,7 +33,7 @@ module "bastion" {
 }
 
 module "ansible" {
-  source      = "./module/Ansible"
+  source      = "./module/ansible"
   name        = local.name
   keypair     = module.vpc.public_key
   subnet_id   = module.vpc.pri_sub1_id
