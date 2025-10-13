@@ -178,14 +178,14 @@ resource "aws_lb_listener" "stage_load_balancer_listener_https" {
   }
 }
 # Create Route 53 record for stage server
-data "aws_route53_zone" "team2-acp-zone" {
+data "aws_route53_zone" "steven-acp-zone" {
   name         = var.domain
   private_zone = false
 }
 
 # Create Route 53 record for stage server
 resource "aws_route53_record" "stage-record" {
-  zone_id = data.aws_route53_zone.team2-acp-zone.zone_id
+  zone_id = data.aws_route53_zone.steven-acp-zone.zone_id
   name    = "stage.${var.domain}"
   type    = "A"
   alias {

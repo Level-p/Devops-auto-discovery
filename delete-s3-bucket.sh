@@ -9,7 +9,7 @@ echo "creating S3 bucket"
 
 # Using the same variables as ones used for creation
 BUCKET_NAME="steven-auto-discovery"
-AWS_REGION="eu-west-3"
+AWS_REGION="eu-west-2"
 AWS_PROFILE="default"
 
 echo "Deleting all objects in $BUCKET_NAME. This process is irreversible..."

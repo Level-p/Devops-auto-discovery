@@ -2,7 +2,7 @@
 
 # set variable for bucket-name
 BUCKET_NAME="steven-auto-discovery"
-AWS_REGION="eu-west-3"
+AWS_REGION="eu-west-2"
 AWS_PROFILE="default"
 
 

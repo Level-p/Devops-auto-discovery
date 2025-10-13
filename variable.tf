@@ -6,5 +6,5 @@ variable "nr-acc-id" {
 }
 
 variable "domain_name" {
-  default = "steven12.space"
+  default = "stevenincloud.online"
 }

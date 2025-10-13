@@ -178,14 +178,14 @@ resource "aws_lb_listener" "prod_load_balancer_listener_https" {
   }
 }
 # Create Route 53 record for prod server
-data "aws_route53_zone" "team2-acp-zone" {
+data "aws_route53_zone" "steven-acp-zone" {
   name         = var.domain
   private_zone = false
 }
 
 # Create Route 53 record for prod server
 resource "aws_route53_record" "prod-record" {
-  zone_id = data.aws_route53_zone.team2-acp-zone.zone_id
+  zone_id = data.aws_route53_zone.steven-acp-zone.zone_id
   name    = "prod.${var.domain}"
   type    = "A"
   alias {

@@ -10,5 +10,5 @@ variable "nr-key" {}
 variable "nr-acc-id" {}
 variable "keypair" {}
 variable "region" {
-  default = "eu-west-1"
+  default = "eu-west-3"
 }

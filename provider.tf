@@ -1,20 +1,20 @@
-provider "aws" {
-  region  = "eu-west-3"
-  # profile = "pet-adoption"
-}
+# provider "aws" {
+#   region  = "eu-west-2"
+#   # profile = "pet-adoption"
+# }
 
 terraform {
   backend "s3" {
-    bucket       = "auto-discovery-euteam1"
+    bucket       = "steven-auto-discovery"
     // use_lockfile = true
     key          = "infrastructure/terraform.tfstate"
-    region       = "eu-west-3"
+    region       = "eu-west-2"
     encrypt      = true
     # profile      = "pet-adoption"
   }
 }
 
 provider "vault" {
-  address = "https://vault.steven12.space"
+  address = "https://vault.stevenincloud.online"
   token   = "hvs.FgsWrVWty4HsB021E2OblCFa" 
 }
