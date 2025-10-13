@@ -21,7 +21,7 @@ terraform {
     bucket       = "steven-auto-discovery"
     # use_lockfile = true
     key          = "vault-jenkins/terraform.tfstate"
-    region       = "eu-west-3"
+    region       = "eu-west-2"
     encrypt      = true
     profile      = "default"
   }

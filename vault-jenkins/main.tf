@@ -12,7 +12,7 @@ resource "aws_vpc" "vpc" {
 resource "aws_subnet" "pub_sub" {
   vpc_id            = aws_vpc.vpc.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = "eu-west-3a"
+  availability_zone = "eu-west-2a"
 
   tags = {
     Name = "${local.name}-pub_sub"
@@ -73,32 +73,6 @@ data "aws_ami" "redhat" {
     values = ["x86_64"]
   }
 }
-
-# resource "aws_instance" "jenkins-server" {
-#   ami                         = data.aws_ami.redhat.id # redhat in eu-west-1
-#   instance_type               = "t3.medium"
-#   key_name                    = aws_key_pair.public_key.id
-#   associate_public_ip_address = true
-#   vpc_security_group_ids      = [aws_security_group.jenkins_sg.id]
-#   iam_instance_profile        = aws_iam_instance_profile.ssm_instance_profile.name
-#   root_block_device {
-#     volume_size = 20    # Size in GB
-#     volume_type = "gp3" # General Purpose SSD (recommended)
-#     encrypted   = true  # Enable encryption (best practice)
-#   }
-# user_data = templatefile("./jenkins_userdata.sh", {
-
-#     region    = var.region
-#   })
-#   metadata_options {
-#     http_tokens = "required"
-
-#   }
-
-#   tags = {
-#     Name = "${local.name}-jenkins-server"
-#   }
-# }
 
 # Create IAM role for Jenkins server to assume  SSM role
 resource "aws_iam_role" "ssm-jenkins-role" {
