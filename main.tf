@@ -1,5 +1,5 @@
 locals {
-  name = "steve"
+  name = "steven"
 }
 
 data "aws_route53_zone" "zone" {
