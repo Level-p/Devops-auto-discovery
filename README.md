@@ -1,1 +1,1 @@
-# 11-aug-2025-pet-adoption-auto-discovery-project-eu-team-1
+# Devops Auto-discovery project
